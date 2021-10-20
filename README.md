@@ -1,5 +1,5 @@
-# [HolidayLights](https://elchonock.github.io/HalloweenDist/)
-### Halloween Pumpkin Lights. Add a little Holiday spirit to your website!
+# [Halloween Pumpkin Lights](https://elchonock.github.io/HalloweenDist/)
+### Add a little Holiday spirit to your website!
 
 #### Add animated pumpkins to your website using JavaScript and CSS.
 #### Click on pumpkin and it will light up random color!
