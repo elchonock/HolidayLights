@@ -1,0 +1,114 @@
+body{
+    background-color: #333;
+}
+.wrapper{
+    margin-top: -10px;
+    margin-right:-10px;
+    margin-left: -10px;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5px;
+}
+
+
+.pumpkin{
+    position: relative;
+    // &:hover::after{
+    //     transform: rotate(6deg);        
+    // }
+}
+
+.pumpkin__item{
+    width: 40px;
+    cursor: pointer;
+    fill: #f38b04;
+    transition: all ease 0.25s 0s; 
+    stroke: #333;
+    &:hover{
+        width: 50px;
+        transform: rotate(10deg);
+    }
+}
+
+
+.pumpkin:not(:last-child)::after {
+    content: '';
+    top: -18px;
+    left: 46%;
+    position: absolute;
+    width: 90px;
+    height: 28px;
+    border-bottom: 4px solid #222;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+.pumpkin:nth-child(3n+4){
+    top: 10px;
+    .pumpkin__item{
+        width: 45px;
+        filter: drop-shadow( 3px 3px 2px rgba(3, 3, 3, 0.8));        
+        &:hover{
+            width: 50px;
+            transform: rotate(-10deg);            
+        }        
+    } 
+    &::after{
+        transform: rotate(5deg);
+    }
+
+}
+.pumpkin:nth-child(2n+3){
+    
+    &::after{
+        transform: rotate(5deg);
+    }
+
+    .pumpkin__item{
+        width: 35px;
+        filter: drop-shadow( 3px 3px 2px rgba( 3, 3, 3, .8));
+        &:hover{
+            width: 50px;
+            transform: rotate(-10deg);           
+        }        
+    } 
+}
+
+
+.pumpkin__animation{
+    animation: 'pumpkin-animation' ease-in-out 1.5s 3;    
+
+}
+
+@keyframes pumpkin-animation{
+    0%{ 
+        transform:  rotate(0deg);
+        margin-left: 0px;
+    }
+
+    25%{ 
+        transform: rotate(-15deg);
+        margin-left: -5px;
+    }
+
+    50%{
+        transform: rotate(15deg); 
+        margin-left: 5px;              
+    }
+
+    75%{
+        transform:  rotate(-10deg);  
+        margin-left: 3px;                           
+    }
+    
+    100%{
+        transform:  rotate(0deg);     
+        margin-left: 0px;   
+    }
+
+}
